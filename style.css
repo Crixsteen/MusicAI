@@ -1,0 +1,435 @@
+/* General styles for the app */
+body {
+    background-color: #4f4c4c; /* Grigio più chiaro */
+    color: #fff; /* Testo bianco */
+    font-family: 'Comic Sans MS', cursive; /* Font coerente con MY MOOD */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centra il testo nelle pagine */
+}
+
+
+/* Calendar page layout */
+.calendar-page, .days-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Griglia per i mesi: 3 mesi per riga */
+.months-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tre colonne per i mesi */
+    gap: 10px; /* Spazio tra i pulsanti */
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+/* Griglia per i giorni: tutti visibili in una schermata */
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 colonne per i giorni della settimana */
+    gap: 5px; /* Spazio minimo tra i pulsanti */
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+/* Pulsanti generici per navigazione */
+.navigation-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Stile per i pulsanti di giorni e mesi */
+.day, .month {
+    font-size: 14px; /* Dimensioni coerenti */
+    padding: 10px; /* Dimensioni dei pulsanti */
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.day:hover, .month:hover {
+    background-color: #3a8be3;
+}
+
+/* Styling per la pagina delle note */
+.day-details {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #3b3b3b;
+    border-radius: 8px;
+}
+
+textarea#notes-input {
+    width: calc(100% - 20px) !important; /* Margine uniforme su entrambi i lati */
+    height: 50px !important; /* Altezza ridotta */
+    padding: 10px !important; /* Spaziatura interna */
+    margin: 10px auto !important; /* Centra il riquadro e aggiunge margini */
+    font-size: 14px !important; /* Font ottimizzato per leggibilità */
+    border: none !important;
+    border-radius: 5px !important;
+    box-sizing: border-box !important; /* Padding e bordi inclusi nella dimensione */
+}
+
+
+
+/* Campo URL */
+input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3a8be3;
+}
+
+#emoji-grid {
+    display: grid; /* Layout a griglia */
+    grid-template-columns: repeat(8, 1fr); /* 8 colonne per una riga */
+    gap: 2px; /* Spaziatura minima */
+    margin-top: 5px; /* Margine ridotto */
+    width: 100%; /* Adatta al contenitore */
+    text-align: center;
+}
+
+.emoji-button {
+    font-size: 14px; /* Dimensione ridotta delle emoticon */
+    padding: 2px; /* Riduzione del padding */
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 10px; /* Larghezza fissa per le emoticon */
+    height: 10px; /* Altezza fissa per le emoticon */
+}
+
+#emotion-select {
+    font-family: 'Comic Sans MS', cursive; /* Font simile a MY MOOD */
+    color: #8A2BE2; /* Viola elettrico */
+    font-size: 18px; /* Dimensione del font */
+    font-weight: bold; /* Grassetto */
+    padding: 5px; /* Spaziatura interna */
+    background-color: #f3f3f3; /* Sfondo chiaro */
+    border: 2px solid #8A2BE2; /* Bordo viola elettrico */
+    border-radius: 5px; /* Angoli arrotondati */
+    width: 100%; /* Larghezza completa */
+    margin-top: 5px; /* Margine superiore */
+    text-align: center; /* Testo centrato */
+}
+
+#emotion-select option {
+    font-family: 'Comic Sans MS', cursive; /* Font per le opzioni */
+    color: #333; /* Colore del testo */
+    background-color: #fff; /* Sfondo bianco */
+    padding: 5px; /* Spaziatura interna */
+}
+
+#song-link {
+    font-family: 'Comic Sans MS', cursive; /* Font simile a MY MOOD */
+    color: #8A2BE2; /* Viola elettrico */
+    font-size: 16px; /* Dimensione del font */
+    padding: 10px; /* Spaziatura interna */
+    background-color: #f3f3f3; /* Sfondo chiaro */
+    border: 2px solid #8A2BE2; /* Bordo viola elettrico */
+    border-radius: 5px; /* Angoli arrotondati */
+    width: 100%; /* Larghezza completa */
+    margin-top: 10px; /* Margine superiore */
+    box-sizing: border-box; /* Include padding nel calcolo */
+}
+
+#save-song-link {
+    font-family: 'Comic Sans MS', cursive; /* Font coerente */
+    color: white; /* Colore del testo */
+    font-size: 16px; /* Dimensione del testo */
+    font-weight: bold; /* Grassetto */
+    padding: 10px 15px; /* Spaziatura interna */
+    background-color: #8A2BE2; /* Sfondo viola elettrico */
+    border: none; /* Nessun bordo */
+    border-radius: 5px; /* Angoli arrotondati */
+    cursor: pointer; /* Puntatore del mouse */
+    margin-top: 10px; /* Margine superiore */
+}
+
+#save-song-link:hover {
+    background-color: #6a1bbd; /* Viola più scuro al passaggio del mouse */
+}
+
+button {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 18px;
+    color: white !important; /* Testo bianco */
+    background-color: #09040a !important; /* Viola brillante */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease !important;
+}
+
+button:hover {
+    background-color: #B300CC !important; /* Viola più scuro al passaggio del mouse */
+}
+
+
+/* Stile generale del contenitore del form */
+form {
+    background-color: #f3f3f3; /* Sfondo chiaro per il form */
+    padding: 20px; /* Spaziatura interna */
+    border-radius: 10px; /* Angoli arrotondati */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Effetto ombra */
+    max-width: 400px; /* Larghezza massima */
+    margin: 50px auto; /* Centra il form */
+}
+
+/* Stile delle etichette */
+form label {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 18px;
+    color: #8A2BE2; /* Viola elettrico per le etichette */
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Stile dei campi input */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #8A2BE2; /* Viola elettrico */
+    border-radius: 5px;
+    width: calc(100% - 24px); /* Adatta alla larghezza del contenitore */
+    box-sizing: border-box;
+}
+
+/* Stile del pulsante */
+form button {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 18px;
+    color: white !important; /* Testo bianco */
+    background-color: #0e0410 !important; /* Viola brillante */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease !important;
+}
+
+form button:hover {
+    background-color: #B300CC !important; /* Viola leggermente più scuro */
+}
+
+
+form button:hover {
+    background-color: #0056b3; /* Blu più scuro al passaggio del mouse */
+}
+
+/* Stile generale del contenitore del form */
+form {
+    background-color: #f3f3f3; /* Sfondo chiaro per il form */
+    padding: 15px; /* Spaziatura interna */
+    border-radius: 10px; /* Angoli arrotondati */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Effetto ombra */
+    max-width: 300px; /* Larghezza massima */
+    margin: 20px auto; /* Centra il form */
+}
+
+/* Stile delle etichette */
+form label {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 18px;
+    color: #8A2BE2; /* Viola elettrico per le etichette */
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Stile dei campi input */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding: 7px;
+    margin-bottom: 8px;
+    border: 2px solid #8A2BE2; /* Viola elettrico */
+    border-radius: 5px;
+    width: calc(100% - 24px); /* Adatta alla larghezza del contenitore */
+    box-sizing: border-box;
+}
+
+/* Stile del pulsante */
+form button {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 18px;
+    color: white;
+    background-color: #007BFF; /* Blu acceso */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3; /* Blu più scuro al passaggio del mouse */
+}
+
+.login-container {
+    background-color: transparent !important; /* Rende trasparente il contenitore */
+    border: none !important; /* Rimuove i bordi */
+    box-shadow: none !important; /* Rimuove le ombre */
+    padding: 0 !important; /* Rimuove eventuale padding */
+    margin: 0 auto; /* Centra il contenitore */
+}
+
+.login-container {
+    background-color: transparent !important; /* Rende trasparente il contenitore */
+    border: none !important; /* Rimuove i bordi */
+    box-shadow: none !important; /* Rimuove le ombre */
+    padding: 20px !important; /* Mantiene un po' di spaziatura interna */
+    text-align: center; /* Centra il contenuto all'interno */
+}
+
+#app .login-container {
+    background-color: transparent !important; /* Rende trasparente il contenitore */
+    border: none !important; /* Rimuove eventuali bordi */
+    box-shadow: none !important; /* Rimuove le ombre */
+    padding: 20px !important; /* Mantiene spaziatura interna */
+    text-align: center; /* Centra il contenuto */
+}
+
+html body #app .login-container {
+    background-color: transparent !important; /* Trasparente */
+    border: none !important; /* Rimuove i bordi */
+    box-shadow: none !important; /* Rimuove le ombre */
+    padding: 20px !important; /* Spaziatura interna */
+    text-align: center !important; /* Contenuto centrato */
+}
+
+#login-form {
+    background-color: transparent !important; /* Rimuove lo sfondo */
+    border: none !important; /* Rimuove bordi */
+    box-shadow: none !important; /* Rimuove ombre */
+    padding: 20px !important; /* Mantiene una spaziatura interna */
+}
+
+.welcome-page ~ .style-selector {
+    display: none !important;
+}
+
+#style-select {
+    font-family: 'Comic Sans MS', cursive; /* Mantieni lo stile coerente */
+    font-size: 12px; /* Riduci la dimensione del testo */
+    padding: 1px; /* Riduci la spaziatura interna */
+    border: 1px solid #8A2BE2; /* Meno pronunciato */
+    border-radius: 5px; /* Riduci gli angoli arrotondati */
+    background-color: #f3f3f3; /* Sfondo chiaro */
+    color: #333; /* Colore del testo */
+    width: 60%; /* Riduci la larghezza */
+    margin: 10px auto; /* Margine verticale più piccolo */
+    display: block; /* Rende il selettore centrato */
+    box-shadow: none; /* Rimuovi l'ombra */
+    text-align: center;
+    transition: all 0.2s ease; /* Animazione più veloce */
+}
+
+#style-select:hover {
+    background-color: #f0f0f0; /* Colore dello sfondo più chiaro */
+    border-color: #6a1bbd; /* Mantieni l'effetto hover */
+}
+
+#falling-notes {
+    border: 2px solid red; /* Per verificare la visibilità */
+}
+
+#falling-notes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* Imposta un valore più alto */
+    pointer-events: none; /* Assicura che non interferisca con i clic */
+}
+
+
+.day-details {
+    position: relative;
+    background-color: #333; /* Nero */
+    margin: auto;
+    width: 90%; /* Adattabile per dispositivi mobili */
+    max-width: 500px; /* Limita la larghezza per desktop */
+    padding: 20px;
+    border-radius: 10px; /* Angoli arrotondati */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background-image: url('path/to/your/image.jpg'); /* Percorso dell'immagine */
+    background-size: cover; /* Copre tutto il viewport */
+    background-repeat: no-repeat; /* Non ripetere l'immagine */
+    background-position: center; /* Centra l'immagine */
+    min-height: 100vh; /* Assicura che il corpo sia alto almeno quanto il viewport */
+    margin: 0; /* Rimuove margini */
+    padding: 0; /* Rimuove padding */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
